@@ -4,6 +4,7 @@
   --l-green: rgb(155, 188, 143);
   --n-green: rgb(56, 87, 44);
   --g-white: rgb(236, 246, 232);
+  --brown: rgb(48, 42, 23);
 }
 *{
     font-family: "Times New Roman", Times, serif;
@@ -76,9 +77,107 @@ main {
 
 .navbar a:hover {
     color: --l-green;
-    border-color: rgb(10, 47, 2);
-    /*border-style: solid;
-    border-width: 1px;*/
+}
+
+.logo a {
+  font-family: Georgia;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8fcf7;
+  box-shadow: 0 0 10px rgba(47, 27, 0, 0.15);
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CSS for portfolio grid */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  max-height: 400px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8fcf7;
+  box-shadow: 0 0 10px rgba(47, 27, 0, 0.15);
+}
+
+.item-link {
+  width: 70%;
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  flex-basis: 50px;
+  flex-grow: 2;
+}
+
+.project-details {
+  display: flex;
+  width: 30%;
+  height: 500px;
+  flex-shrink: 1;
+  padding: 0 20px;
+  margin: 0px;
+  line-height: 1.5;
+  overflow: scroll;
+
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  /* Debug border */
+  /* border: 2px solid green; */
+}
+
+.project-details a {
+  color: var(--cg-black);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.project-details a:hover {
+  color: var(--cg-blue);
+  text-decoration: underline;
+}
+
+.project-details {
+  font-weight: lighter;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* CSS for resume page */
@@ -104,16 +203,34 @@ main {
 
 /* CSS for contact input */
 /* all input tages w/ req. attribute */
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
 input[required] {
     text-decoration: underline;
 }
 /* all input tags w/ this type attribute */
-input[type=text] {
-    height: 10%;
-    width: 10%;
+input[type=text],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
 }
 input:focus {
   border: 1px solid #184710;
+}
+/* Add some spacing to the form */
+form {
+  width: 400px;
+  margin: 0 auto;
 }
 
 /* CSS for page footer */
